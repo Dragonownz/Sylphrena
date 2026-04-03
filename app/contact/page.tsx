@@ -1,3 +1,5 @@
+'use client';
+
 import { Mail, MessageSquare, User } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 import ContactForm from '@/components/ContactForm';

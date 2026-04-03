@@ -48,6 +48,27 @@ export default function Home() {
           <div className="absolute bottom-20 right-10 w-72 h-72 bg-pink-500/20 rounded-full blur-3xl animate-pulse-scale" style={{animationDelay: '0.5s'}}></div>
         </div>
 
+        {/* Mascot Image with Effects */}
+        <div className="flex justify-center mb-8">
+          <div className="relative w-64 h-64 animate-flying animate-aurora-glow">
+            <div className="absolute inset-0 animate-digital-flicker">
+              <img 
+                src="/iris-mascot.png" 
+                alt="Iris mascot - cute anime girl with headphones"
+                className="w-full h-full object-contain drop-shadow-2xl"
+              />
+            </div>
+            {/* Glitch effect overlays */}
+            <div className="absolute inset-0 opacity-0 hover:opacity-20 animate-glitch-color transition-opacity">
+              <img 
+                src="/iris-mascot.png" 
+                alt="Glitch effect"
+                className="w-full h-full object-contain"
+              />
+            </div>
+          </div>
+        </div>
+
         <div className="text-center space-y-6 mb-16 relative z-10">
           <div className="inline-block bg-purple-500/10 border border-purple-500/30 rounded-full px-4 py-2 text-sm text-purple-300 animate-flip-in-y">
             ✨ v2.5 Just Launched 🩷 Super Cute

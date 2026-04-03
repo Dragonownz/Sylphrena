@@ -376,4 +376,120 @@
   .backface-hidden {
     backface-visibility: hidden;
   }
+
+  /* Flying and Virtual Effects */
+  @keyframes flying {
+    0%, 100% {
+      transform: translateY(0px) translateX(0px);
+    }
+    25% {
+      transform: translateY(-30px) translateX(15px);
+    }
+    50% {
+      transform: translateY(-50px) translateX(0px);
+    }
+    75% {
+      transform: translateY(-30px) translateX(-15px);
+    }
+  }
+
+  @keyframes glitch {
+    0% {
+      clip-path: inset(40% 0 61% 0);
+      transform: translate(0);
+    }
+    20% {
+      clip-path: inset(92% 0 1% 0);
+      transform: translate(-2px, 2px);
+    }
+    40% {
+      clip-path: inset(43% 0 1% 0);
+      transform: translate(-2px, -2px);
+    }
+    60% {
+      clip-path: inset(25% 0 58% 0);
+      transform: translate(2px, 2px);
+    }
+    80% {
+      clip-path: inset(54% 0 7% 0);
+      transform: translate(2px, -2px);
+    }
+    100% {
+      clip-path: inset(58% 0 43% 0);
+      transform: translate(0);
+    }
+  }
+
+  @keyframes glitch-color {
+    0% {
+      filter: hue-rotate(0deg);
+    }
+    20% {
+      filter: hue-rotate(90deg) saturate(1.5);
+    }
+    40% {
+      filter: hue-rotate(180deg) saturate(1.5);
+    }
+    60% {
+      filter: hue-rotate(270deg) saturate(1.5);
+    }
+    80% {
+      filter: hue-rotate(90deg);
+    }
+    100% {
+      filter: hue-rotate(0deg);
+    }
+  }
+
+  @keyframes digital-flicker {
+    0%, 100% {
+      opacity: 1;
+      filter: brightness(1);
+    }
+    15% {
+      opacity: 0.95;
+      filter: brightness(1.2);
+    }
+    30% {
+      opacity: 1;
+      filter: brightness(0.8);
+    }
+    50% {
+      opacity: 1;
+      filter: brightness(1);
+    }
+    70% {
+      opacity: 0.98;
+      filter: brightness(1.1);
+    }
+  }
+
+  @keyframes aurora-glow {
+    0%, 100% {
+      box-shadow: 0 0 20px rgba(168, 85, 247, 0.4), 0 0 40px rgba(236, 72, 153, 0.2);
+    }
+    50% {
+      box-shadow: 0 0 40px rgba(168, 85, 247, 0.8), 0 0 80px rgba(236, 72, 153, 0.4);
+    }
+  }
+
+  .animate-flying {
+    animation: flying 6s ease-in-out infinite;
+  }
+
+  .animate-glitch {
+    animation: glitch 0.5s infinite;
+  }
+
+  .animate-glitch-color {
+    animation: glitch-color 3s infinite;
+  }
+
+  .animate-digital-flicker {
+    animation: digital-flicker 4s ease-in-out infinite;
+  }
+
+  .animate-aurora-glow {
+    animation: aurora-glow 3s ease-in-out infinite;
+  }
 }
