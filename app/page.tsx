@@ -19,6 +19,7 @@ export default function Home() {
             <a href="#community" className="hover:text-purple-400 transition">Community</a>
             <a href="#faq" className="hover:text-purple-400 transition">FAQ</a>
             <a href="#why-iris" className="hover:text-purple-400 transition">Why Iris</a>
+            <a href="/contact" className="hover:text-purple-400 transition">Contact</a>
             <a href="/terms" className="hover:text-purple-400 transition">Terms</a>
           </div>
           <div className="flex gap-3">
@@ -39,22 +40,28 @@ export default function Home() {
         </div>
       </nav>
 
-      {/* Hero Section */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="text-center space-y-6 mb-16">
-          <div className="inline-block bg-purple-500/10 border border-purple-500/30 rounded-full px-4 py-2 text-sm text-purple-300 animate-slide-up">
+      {/* Hero Section with 3D Effects */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 perspective-1200">
+        {/* Animated Background Orbs */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-purple-500/20 rounded-full blur-3xl animate-pulse-scale"></div>
+          <div className="absolute bottom-20 right-10 w-72 h-72 bg-pink-500/20 rounded-full blur-3xl animate-pulse-scale" style={{animationDelay: '0.5s'}}></div>
+        </div>
+
+        <div className="text-center space-y-6 mb-16 relative z-10">
+          <div className="inline-block bg-purple-500/10 border border-purple-500/30 rounded-full px-4 py-2 text-sm text-purple-300 animate-flip-in-y">
             ✨ v2.5 Just Launched 🩷 Super Cute
           </div>
           
-          <h1 className="text-6xl sm:text-7xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent animate-slide-up" style={{animationDelay: '0.1s'}}>
+          <h1 className="text-6xl sm:text-7xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent animate-zoom-in-rotate" style={{animationDelay: '0.2s'}}>
             Your Server&apos;s Cutest Music Companion 🎶
           </h1>
           
-          <p className="text-xl text-slate-300 max-w-2xl mx-auto animate-slide-up" style={{animationDelay: '0.2s'}}>
+          <p className="text-xl text-slate-300 max-w-2xl mx-auto animate-slide-up-fade" style={{animationDelay: '0.3s'}}>
             Iris is an adorable ghost who loves music more than haunting! High-fidelity streaming, smart queues, and dreamy audio filters — wrapped in the most kawaii package. 👻💜
           </p>
           
-          <div className="flex gap-4 justify-center pt-4 animate-slide-up" style={{animationDelay: '0.3s'}}>
+          <div className="flex gap-4 justify-center pt-4 animate-pop-in" style={{animationDelay: '0.4s'}}>
             <Button 
               size="lg"
               className="bg-purple-600 hover:bg-purple-700 text-lg px-8"
@@ -353,6 +360,7 @@ export default function Home() {
               <ul className="space-y-2 text-slate-400 text-sm">
                 <li><a href="#faq" className="hover:text-purple-400 transition">FAQ</a></li>
                 <li><a href="#why-iris" className="hover:text-purple-400 transition">Safety</a></li>
+                <li><a href="/contact" className="hover:text-purple-400 transition">Contact Us</a></li>
                 <li><a href="https://discord.gg/qYQAVmzJEC" target="_blank" rel="noopener noreferrer" className="hover:text-purple-400 transition">Support</a></li>
               </ul>
             </div>
